@@ -32,7 +32,7 @@ class NecroDancerClientCommandProcessor(ClientCommandProcessor):
 
 class NecroDancerContext(CommonContext):
     command_processor: int = NecroDancerClientCommandProcessor
-    tags = CommonContext.tags | {"TextOnly", "NecroHinter"}
+    tags = CommonContext.tags | {"HintGame", "NecroHinter"}
     game = ""  # empty matches any game since 0.3.2
     items_handling = 0b111  # receive all items for /received
     want_slot_data = False  # Can't use game specific slot_data
